@@ -1,0 +1,69 @@
+.Verify-Page {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .verification-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .verification-box h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .verification-box p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .verification-box {
+      padding: 20px;
+    }
+  
+    .verification-box h1 {
+      font-size: 6vw;
+    }
+  
+    .verification-box p {
+      font-size: 4.5vw;
+    }
+  }
+  
+  /* Tablet responsiveness */
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .verification-box h1 {
+      font-size: 2.3vw;
+    }
+  
+    .verification-box p {
+      font-size: 2vw;
+    }
+  }
+  
+  /* Small desktop responsiveness */
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    .verification-box h1 {
+      font-size: 2rem;
+    }
+  
+    .verification-box p {
+      font-size: 1.2rem;
+    }
+  }
+  

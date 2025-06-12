@@ -1,0 +1,136 @@
+#account-creation-form{
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+#account-creation-form-content{
+    position: relative;
+    height: auto;
+    padding-bottom: 40px;
+    width: 620px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+#account-creation-form-content>h1{
+    
+    margin:0 0 20px 0;
+    padding-top: 15px;
+    width: 100%;
+    height: 70px;
+    background-color: #4EAD4E;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.wrapper{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #4EAD4E; */
+}
+.wrapper p {
+    margin: 10px 0 0 0;
+    width: 65%;
+}
+
+
+.display {color: red; }
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 520px;
+}
+
+.input-wrapper img{
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    right: 7%;
+    bottom: 17%;
+    
+}
+.input-wrapper input[type="password"]::-ms-reveal,
+.input-wrapper input[type="password"]::-ms-clear {
+  display: none; /* Hide show password and clear buttons in Edge */
+}
+
+
+#account-creation-form p span{
+    color: rgb(5, 5, 199);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.text-input{
+    margin-top: 30px;
+    width: 90%;
+    height: 50px;
+    font-size: 100%;
+    padding-left: 25px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: transparent;
+}
+
+#account-creation-form-content i{
+  
+    position: absolute;
+    top: 58%; /* Align vertically to the middle of the input */
+    left: 6%; /* Position 10px from the right */
+    
+
+}
+
+#create-account-button{
+    margin-top: 25px;
+    font-size: 18px;
+    width: clamp(270px ,80%,350px);
+    height: 50px;
+    cursor:pointer;
+    border-radius: 25px;
+    border:3px solid black;
+    background-color: #4EAD4E;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    #account-creation-form {height: auto; justify-content: start; margin-top: 50px;}
+    #account-creation-form-content{width: clamp(335px, 90%, 446px); height: fit-content; padding-bottom: 20px; /* Add extra space visually */}
+
+    #create-account-button{height: 50px;   font-size: 18px;}
+    .input-wrapper{width: 100%; }
+    .input-wrapper img { right: 5%;}
+    #account-creation-form-content i{
+        left: 5%; 
+    }
+  
+    .text-input{width: 90%; padding-right: 1.5%;}
+    .wrapper p{width: 90%;}
+}
+
+@media (min-width: 600px) and  (max-width:1024px){
+    #account-creation-form-content{width: clamp(480px,70%,550px);}
+    .input-wrapper{width: 75%;}
+    #account-creation-form-content i{left: 6%;}
+}
+
+@media (min-width: 1025px) and  (max-width:1400px){
+    .input-wrapper img{right: 7%; bottom: 15%;}
+}

@@ -1,0 +1,133 @@
+.bill-page-wrapper{
+    min-height:90dvh;
+    flex-direction: column;
+    /* background-color: red; */
+    display: flex;
+    width:  75%;
+    padding-bottom: 20px;
+    margin:  2% auto 0 auto ;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+.bill-input-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.bill-input-wrapper label {
+    /* background-color: red; */
+    width: clamp(380px,90%,500px);
+    text-align: start;
+}
+.cycle-name{
+    background-color: transparent;
+    width: clamp(380px,90%,500px);
+    height: 40px;
+    padding-left: 15px;
+    border: 2px solid black;
+}
+
+.border {
+     width: clamp(380px,90%,500px);
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.border label{
+  
+    width: 100%;
+}
+.file-wrapper{display: flex; justify-content: center;align-items: center; width: 100%; }
+.image {width: 100%; height: 300px ; display: flex; justify-content: center; align-items: center;}
+.image img {width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain; position: relative;}
+.no-img { background-color: lightblue; border-radius: 20px;}
+.image h2 {position: absolute;}
+.item-table{
+    scrollbar-width: none;     /* Firefox */
+    max-width: 100%;
+   overflow-x: auto;
+ 
+}
+
+table{
+    border: 2px solid black ;
+    border-collapse: collapse;
+    overflow-x: scroll; /* Add horizontal scrolling if the table overflows */
+    overflow-y: auto; 
+    
+}
+
+.info-row td{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color:  #4EAD4E;;
+}
+table td {
+    border: 2px solid black;
+}
+
+.table-input{
+    background-color: transparent;
+    border: transparent;
+    padding: 10px;
+    outline: none;
+}
+
+tr td:first-child{
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button{
+    font-size: 15px;
+    width:100px;
+    height: 50px;
+    padding: 15px;
+    cursor:pointer;
+    border-radius: 25px;
+    border:3px solid black;
+    background-color: #4EAD4E;
+    color: white;
+}
+
+.error-message{
+    max-width: 100%;
+    color: red;
+    font-weight: 600;
+    /* background-color: #4EAD4E; */
+    text-align: center;
+}
+
+.total{
+    font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+    .bill-page-wrapper{margin-top: 9%; justify-content: start;}
+    .bill-input-wrapper{width: 100%;}
+    .border{width: 100%;}
+  
+
+    .cycle-name ,.bill-input-wrapper label{
+    width: 100%;
+    }}
+
+
+    @media (min-width: 600px) and  (max-width:1024px){
+        .bill-input-wrapper{width: 100%;}  
+        .bill-input-wrapper input , .bill-input-wrapper label{width: clamp(380px,90%,500px);}   }
+    

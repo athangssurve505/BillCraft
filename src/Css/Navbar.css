@@ -1,0 +1,233 @@
+#navbar-bill-img{
+    height: 30px;
+    width: 30px;
+}
+
+
+.list-common>ul{
+    display: flex;
+    list-style-type: none;
+   
+    }
+
+    .list-common>ul>li{
+        list-style-type: none;
+        cursor: pointer;
+       width: fit-content;
+        }
+
+.offScreen-menu{
+    position: fixed;
+    z-index:100;
+    left: 150%;
+    top:70px;
+    background-color: #4EAD4E;
+    height: 100%;   
+    width: 100%;
+    transition:  0.5s ease-in-out;
+ 
+   
+    
+}
+
+
+.offScreen-menu>ul{
+    gap: 20px;
+    font-size: 7vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: bold;
+
+}
+
+nav{
+    background-color: #4EAD4E;
+    position: relative;
+    height: 70px;
+    z-index: 200; 
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+   }    
+
+#img-name-div>p{
+    width: 40%;}
+
+#img-name-div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 30%;
+   
+    padding-left: 1.5vw;
+
+}
+
+.onScreen-menu{
+    width: 70%;
+    gap: 15px;
+    height: 100%;
+}
+
+.onScreen-menu>ul{
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    
+}
+
+.menu-button{
+    border:transparent;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    
+}
+svg {
+    margin: auto 0; 
+    fill: white;
+    stroke: white;
+    stroke-width: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+
+.list-common
+    >ul>li:hover{
+    color:white
+}
+
+.line {
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+  
+  /* Transformations for the "X" state */
+  .line.top {
+    transform: rotate(45deg) translate(-4px, 8px);
+  }
+  
+  .line.middle {
+    opacity: 0; /* Hide the middle line */
+  }
+  
+  .line.bottom {
+    transform: rotate(-45deg) translate(-5px, -2px);
+  }
+
+.showMenu {
+    left: 0%;
+    transition:  0.5s ease-in-out;
+}
+.no-scroll{
+    overflow: hidden;
+}
+
+@media (max-width: 600px){
+    #img-name-div>p{
+        width: 260px;
+        white-space: nowrap;
+
+    }
+}
+
+    @media (min-width: 600px) and  (max-width:1024px){
+        .offScreen-menu{
+            width: clamp(300px, 60%, 550px);
+            height: auto;
+        }
+
+        .offScreen-menu>ul{
+            font-size: clamp(1.7rem, 2.5vw, 3.5rem);
+        }
+        .showMenu{
+            left: 50%
+        }
+    }
+
+@media (min-width: 1025px){
+
+    .showMenu{
+        left: 70%;
+    }
+    .offScreen-menu{
+        width: 30%;
+        height: auto;
+    }
+    .offScreen-menu>ul{
+        font-size: clamp(1.2rem, 2vw, 2rem);
+
+    }
+}
+
+
+/* Confirm dialog customization */
+
+/* background blur and color */
+.react-confirm-alert-overlay {
+    overflow: hidden;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: rgba(0, 0, 0, 0.5) !important; /* semi-transparent */
+    backdrop-filter: blur(6px) !important;
+    z-index: 9999 !important;
+    touch-action: none !important;        /* Important */
+  }
+  
+  /* 🔸 Dialog box (responsive & centered) */
+  .react-confirm-alert {
+    border-radius: 12px !important;
+    width: 90% !important;
+    max-width: 350px !important;
+    text-align: center !important;
+  }
+  /* 🔸 Responsive text */
+  .react-confirm-alert h1,
+  .react-confirm-alert p {
+    font-size: 1rem !important;
+  }
+  
+  /* 🔸 Button group */
+  .react-confirm-alert-button-group {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-top: 20px !important;
+  }
+  
+  /* 🔸 Individual buttons */
+  .react-confirm-alert-button-group button {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    margin: 0 10px !important;
+    transition: all 0.3s ease !important;
+    min-width: 100px !important;
+  }
+
+  .react-confirm-alert-body {width: 330px !important;}
+  .react-confirm-alert-button-group button:hover {
+    background-color: #388e3c !important;
+  }
+  
+  
