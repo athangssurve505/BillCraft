@@ -54,7 +54,7 @@ export default function CreateBill() {
       
         formData.append("image", image);
         try{
-          const response = await axios.post("http://192.168.0.229:3000/upload",formData)
+          const response = await axios.post("https://billcraft-backend-dkux.onrender.com/upload",formData)
           console.log(response.data.url)
           return response.data.url
         }catch(err){console.log(err)}

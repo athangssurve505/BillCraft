@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "../Css/CreateAcc.css";
 import eye from "../eye.png";
 import hide_eye from "../invisible.png";
