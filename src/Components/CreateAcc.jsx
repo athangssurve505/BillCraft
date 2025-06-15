@@ -40,7 +40,7 @@ export default function CreateAcc({onSwitch}) {
   };
 
 
-  const validateForm = (e) => {
+  const validateForm = async(e) => {
     e.preventDefault(); // Prevent form submission
     let valid = true;
 
@@ -67,8 +67,8 @@ export default function CreateAcc({onSwitch}) {
     setErrors(newErrors);
 
     if(valid){
-      toast.success('Account has been created successfully')
-      addUserToFirebase(NewAccForm.email,NewAccForm.password);
+       await addUserToFirebase(NewAccForm.email,NewAccForm.password);
+     
     }
   }
   // Regex
@@ -80,6 +80,7 @@ export default function CreateAcc({onSwitch}) {
     firebase
         .signUpUser(email, password)
         .then((userCredential) => {
+          toast.success('Account has been created successfully')
           const user = userCredential.user;
           if (user) {
             firebase
@@ -88,14 +89,18 @@ export default function CreateAcc({onSwitch}) {
                 navigate("/verify",{replace:true});
               })
               .catch((error) => {
-                console.log("Error sending verification email:", error.message)
+                toast.error("Error sending verification email:", error.message)
               });
           } else {
-            console.log("No user object found in userCredential.");
+            toast.error("No user object found in userCredential.");
           }
         })
         .catch((error) => {
-          console.log("Error signing up user:", error.message);
+          if (error.code === 'auth/email-already-in-use') {
+            toast.error('Email already in use. Try logging in instead.');
+            return;
+          } 
+          alert(error.message);
         });
     }
   
